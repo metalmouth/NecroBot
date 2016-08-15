@@ -522,6 +522,11 @@
                         <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
                             <Label Style="{StaticResource LineItemLabel}" Content="Locations List" ToolTip="" />
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Coordinates (Latitude,Longitude)" ToolTip="" />
+                            <TextBox x:Name="Coords" Style="{StaticResource LineItemTextBoxSm}" Width="220" />
+                            <Button x:Name="AddCoordsButton" Content="Add" Width="75" Click="AddCoordsButton_Click"/>
+                        </StackPanel>
                         <ScrollViewer MaxHeight="250" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Margin="0,0,15,0">
                             <ItemsControl ItemsSource="{Binding Settings.PokemonToSnipe.Locations}" ItemTemplate="{StaticResource LocationList}" />
                         </ScrollViewer>

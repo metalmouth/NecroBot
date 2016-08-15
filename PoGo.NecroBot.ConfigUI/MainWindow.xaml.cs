@@ -122,6 +122,22 @@ namespace PoGo.NecroBot.ConfigUI
             Settings.Longitude = Settings.DefaultLongitude;
         }
 
+        private void AddCoordsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.PokemonToSnipe.Locations.Add(new Location(Convert.ToDouble(Coords.Text.Split(',')[0]), Convert.ToDouble(Coords.Text.Split(',')[1])));
+            
+            ReloadButton_Click(this, null);
+        }
+
+        public void DelCoordButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(this.Title);
+        }
+
+        public void Test(object sender)
+        {
+            MessageBox.Show("test");
+        }
     }
 
 }

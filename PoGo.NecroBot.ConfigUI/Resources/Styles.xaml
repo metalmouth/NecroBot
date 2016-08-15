@@ -59,6 +59,7 @@
             <TextBlock Width="200"  Text="{Binding Latitude}" TextAlignment="left" Margin="3,1" VerticalAlignment="Center" />
             <Label Content="Longitude:" ToolTip="" />
             <TextBlock Width="200" Text="{Binding Longitude}"    TextAlignment="Left"  Margin="3,1" VerticalAlignment="Center" />
+            <Button x:Name="DelCoords" Content="Delete" Width="75" Command="{Binding DataContext.Test,RelativeSource={RelativeSource AncestorType=StackPanel}}"/>
         </StackPanel>
     </DataTemplate>
 </ResourceDictionary>
