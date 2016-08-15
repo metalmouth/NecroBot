@@ -53,7 +53,7 @@
         </CheckBox>
     </DataTemplate>
     
-    <DataTemplate x:Key="Test">
+    <DataTemplate x:Key="LocationList">
         <StackPanel Orientation="Horizontal">
             <Label Content="Latitude:" ToolTip="" />
             <TextBlock Width="200"  Text="{Binding Latitude}" TextAlignment="left" Margin="3,1" VerticalAlignment="Center" />

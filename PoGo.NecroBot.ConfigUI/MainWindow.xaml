@@ -523,7 +523,7 @@
                             <Label Style="{StaticResource LineItemLabel}" Content="Locations List" ToolTip="" />
                         </StackPanel>
                         <ScrollViewer MaxHeight="250" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Margin="0,0,15,0">
-                            <ItemsControl ItemsSource="{Binding Settings.PokemonToSnipe.Locations}" ItemTemplate="{StaticResource Test}" />
+                            <ItemsControl ItemsSource="{Binding Settings.PokemonToSnipe.Locations}" ItemTemplate="{StaticResource LocationList}" />
                         </ScrollViewer>
                     </StackPanel>
                 </ScrollViewer>
