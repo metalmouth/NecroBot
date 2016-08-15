@@ -446,7 +446,7 @@
             </TabItem>
 
             <TabItem Header="Transfer">
-                <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible">
+                <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" Height="450" Margin="0,0,0,-0.4" VerticalAlignment="Bottom">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
                             <TextBlock Padding="3,3,24,3" TextWrapping="Wrap" MaxWidth="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollViewer}}}"
@@ -463,12 +463,68 @@
             </TabItem>
 
             <TabItem Header="Sniping">
-                <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible">
+                <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" Margin="0,-4,0,3.6">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
-                            <TextBlock Padding="3,3,24,3" TextWrapping="Wrap" MaxWidth="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollViewer}}}"
-                                       Text="We are currently refactoring our entire sniping system at this time and therefore not working on the UI until the dust has settled. For now you must alter your config file by hand for sniping options. We will be adding configuration here once the dust has settled on the new sniping features. WARNING: Sniping is extremely risky and easy to detect, using sniping will almost certainly flag your account for a future ban - you have been warned!!!" />
+                            <CheckBox Content="Use Snipe Location Server" IsChecked="{Binding Settings.UseSnipeLocationServer}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Snipe Location Server" ToolTip="" />
+                            <TextBox Style="{StaticResource LineItemTextBoxSm}" Text="{Binding Settings.SnipeLocationServer}" Width="163" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Snipe Location Server Port" ToolTip="" />
+                            <TextBox Style="{StaticResource LineItemTextBoxSm}" Text="{Binding Settings.SnipeLocationServerPort}" Width="163" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Get Sniper Info From Pokezz" IsChecked="{Binding Settings.GetSniperInfoFromPokezz}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Get Only Verified Sniper Info From Pokezz" IsChecked="{Binding Settings.GetOnlyVerifiedSniperInfoFromPokezz}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Get Sniper Info From PokeSnipers" IsChecked="{Binding Settings.GetSniperInfoFromPokeSnipers}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Get Sniper Info From PokeWatchers" IsChecked="{Binding Settings.GetSniperInfoFromPokeWatchers}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Get Sniper Info From Skiplagged" IsChecked="{Binding Settings.GetSniperInfoFromSkiplagged}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Min Pokeballs To Snipe" ToolTip="" />
+                            <TextBox Style="{StaticResource LineItemTextBoxSm}" Text="{Binding Settings.MinPokeballsToSnipe}" Width="35" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Min Pokeballs While Snipe" ToolTip="" />
+                            <TextBox Style="{StaticResource LineItemTextBoxSm}" Text="{Binding Settings.MinPokeballsWhileSnipe}" Width="35" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Min Delay Between Snipes" ToolTip="" />
+                            <TextBox Style="{StaticResource LineItemTextBoxSm}" Text="{Binding Settings.MinDelayBetweenSnipes}" Width="85" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Sniping ScanOffset" ToolTip="" />
+                            <TextBox Style="{StaticResource LineItemTextBoxSm}" Text="{Binding Settings.SnipingScanOffset}" Width="35" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Snipe At Pokestops" IsChecked="{Binding Settings.SnipeAtPokestops}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Snipe Ignore Unknown Iv" IsChecked="{Binding Settings.SnipeIgnoreUnknownIv}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Use Transfer Iv For Snipe" IsChecked="{Binding Settings.UseTransferIvForSnipe}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <CheckBox Content="Snipe Pokemon Not In Pokedex" IsChecked="{Binding Settings.SnipePokemonNotInPokedex}" ToolTip="QED." Width="766" Height="17" VerticalAlignment="Top" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource LineItemPanel}">
+                            <Label Style="{StaticResource LineItemLabel}" Content="Locations List" ToolTip="" />
+                        </StackPanel>
+                        <ScrollViewer MaxHeight="250" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Margin="0,0,15,0">
+                            <ItemsControl ItemsSource="{Binding Settings.PokemonToSnipe.Locations}" ItemTemplate="{StaticResource Test}" />
+                        </ScrollViewer>
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>

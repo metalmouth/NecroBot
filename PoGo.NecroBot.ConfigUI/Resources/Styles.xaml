@@ -52,5 +52,13 @@
             </StackPanel>
         </CheckBox>
     </DataTemplate>
-
+    
+    <DataTemplate x:Key="Test">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Latitude:" ToolTip="" />
+            <TextBlock Width="200"  Text="{Binding Latitude}" TextAlignment="left" Margin="3,1" VerticalAlignment="Center" />
+            <Label Content="Longitude:" ToolTip="" />
+            <TextBlock Width="200" Text="{Binding Longitude}"    TextAlignment="Left"  Margin="3,1" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
 </ResourceDictionary>

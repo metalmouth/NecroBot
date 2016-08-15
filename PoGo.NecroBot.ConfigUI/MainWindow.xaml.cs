@@ -101,7 +101,7 @@ namespace PoGo.NecroBot.ConfigUI
             var profileConfigPath = Path.Combine(profilePath, "config");
             var configFile = Path.Combine(profileConfigPath, "config.json");
             var authFile = Path.Combine(profileConfigPath, "auth.json");
-            _set = Settings.GetGlobalSettingsObject();
+            _set =  Settings.GetGlobalSettingsObject();
             _set.Save(configFile);
             _set.Auth.Save(authFile);
         }
